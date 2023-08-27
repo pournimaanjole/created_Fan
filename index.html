@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <img src="./img/fan2.png" alt="" id="fanimg">
+    <button type="button" onclick="onOff()" id="btn" class="btn btn-outline-info px-5" >On</button>
+    <script>
+        const moving=document.getElementById("fanimg");
+        const btn=document.getElementById("btn")
+        let value ="off";
+        function onOff(){
+            if(value=="off"){
+                moving.src="./img/fan1.gif";
+                value="on";
+                btn.innerText="Off"
+            }
+            else{
+                moving.src="./img/fan2.png";
+               value="off";
+               btn.innerText="on"
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
